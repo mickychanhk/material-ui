@@ -77,7 +77,9 @@ const SelectInput = React.forwardRef(function SelectInput(props, ref) {
     handleRef,
     () => ({
       focus: () => {
-        displayNode.focus();
+        if(displayNode){
+          displayNode.focus();
+        }
       },
       node: inputRef.current,
       value,
